@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts",
-    "build": "tsc -p ."  },
+    "build": "tsc -p ."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
