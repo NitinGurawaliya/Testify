@@ -23,28 +23,38 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Set up working directory
+        run: cd backend
+
       - name: Install dependencies
         run: npm install
+        working-directory: ./backend
 
       - name: Install Prisma CLI
         run: npm install -g prisma
+        working-directory: ./backend
 
       - name: Install TypeScript
         run: npm install -g typescript
+        working-directory: ./backend
 
       - name: Set up Prisma
         run: |
           npx prisma generate
           npx prisma migrate deploy
+        working-directory: ./backend
 
       - name: Build project
         run: npm run build
+        working-directory: ./backend
 
       - name: Run tests
         run: npm test
+        working-directory: ./backend
 
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
           echo "Deploying to production server..."
           # Add your deployment commands here
+        working-directory: ./backend
