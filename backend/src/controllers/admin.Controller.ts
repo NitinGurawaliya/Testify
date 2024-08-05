@@ -10,7 +10,6 @@ enum StatusCode {
     SUCCESS = 200
 }
 
-// Assuming you have an environment variable setup for JWT_SECRET and DATABASE_URL
 const JWT_SECRET = process.env.JWT_SECRET!;
 const DATABASE_URL = process.env.DATABASE_URL!;
 
