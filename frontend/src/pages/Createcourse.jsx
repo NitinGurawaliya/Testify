@@ -3,6 +3,7 @@ import { AuthButton } from '../components/Buttons';
 import { BACKEND_URL } from '../config';
 import axios from 'axios';
 import {useNavigate} from "react-router-dom"
+import { Heading } from '../components/Heading';
 
 const CreateTestForm = () => {
   const [title, setTitle] = useState('');
@@ -85,6 +86,7 @@ const CreateTestForm = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-xl mt-10">
+      <Heading label={"Created Courses"} />
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800">Create New Test</h1>
       {error && <div className="text-red-600 mb-4 p-3 bg-red-100 border border-red-300 rounded-lg">{error}</div>}
       <form className="space-y-8">
