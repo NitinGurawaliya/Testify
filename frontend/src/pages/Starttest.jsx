@@ -36,7 +36,6 @@ const StartTest = () => {
           },
         }
       );
-
       setResult(res.data.result);
       setSubmitted(true);
     } catch (error) {
