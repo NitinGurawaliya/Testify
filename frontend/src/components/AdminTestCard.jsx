@@ -21,6 +21,10 @@ const AdminTestCard = () => {
     });
   }, []);
 
+  const   handlerTestEdit = (testId)=>{
+    navigate(`/admin/test/${testId}`);
+  }
+
   return (
     <>
       {Array.isArray(tests) && tests.length > 0 ? (
@@ -40,10 +44,8 @@ const AdminTestCard = () => {
                 </span>
               </div>
               <ExploreButton 
-                onClick={async function(){
-                  
-                }} 
-                label="Edit Test" 
+                onClick={() => handlerTestEdit(test.id)} 
+                label="View Test" 
               />
             </div>
           </div>
