@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Heading, Subheading } from "../components/Heading";
-import { InputBox } from "../components/Inputbox";
+import { InputBox, PasswordInputBox } from "../components/Inputbox";
 import { AuthButton } from "../components/Buttons";
 import { BottomWarning } from "../components/BottomWarning";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const Signup = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={"Enter your email"}
                 />
-                <InputBox
+                <PasswordInputBox
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder={"Enter your password"}
                 />
@@ -91,6 +91,7 @@ const Signup = () => {
       });
       if (response.data.token) {
         localStorage.setItem("token", `Bearer ${response.data.token}`);
+        localStorage.setItem("userRole","admin")
         navigate("/adminDashboard");
         toast.success("Signed up successfully", {
           position: "top-left",
@@ -134,6 +135,7 @@ const Signup = () => {
       });
       if (response.data.token) {
         localStorage.setItem("token", `Bearer ${response.data.token}`);
+        localStorage.setItem("userRole","user")
         navigate("/userDashboard");
         toast.success("Signed up successfully", {
           position: "top-left",
