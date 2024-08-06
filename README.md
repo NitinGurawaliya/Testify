@@ -1,4 +1,5 @@
-# Test-App
+# Testify
+
 
 This is a test application where users can come and attempt a test, and admins can create tests and see details of a particular test. The project is divided into two main parts: the backend and the frontend.
 
