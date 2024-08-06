@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Heading, Subheading } from "../components/Heading";
-import { InputBox } from "../components/Inputbox";
+import { InputBox, PasswordInputBox } from "../components/Inputbox";
 import { AuthButton } from "../components/Buttons";
 import { BottomWarning } from "../components/BottomWarning";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const Signin = () => {
                }} placeholder={"Enter your email"} />
 
                
-                <InputBox onChange={(e)=>{
+                <PasswordInputBox onChange={(e)=>{
                 setPassword(e.target.value)
                }}  placeholder={"Enter your password"} />
 
