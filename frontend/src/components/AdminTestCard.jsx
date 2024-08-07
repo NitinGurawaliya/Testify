@@ -31,8 +31,8 @@ const AdminTestCard = () => {
         tests.map(test => (
           <div key={test.id} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl">
             <div className="p-6">
-              <h2 className="text-2xl font-bold mb-3 text-gray-800">{test.title}</h2>
-              <p className="text-gray-600 text-base">{test.description}</p>
+              <h2 className="text-2xl font-semibold mb-3 text-gray-800">{test.title}</h2>
+              <p className="text-gray-600 font-serif text-base">{test.description}</p>
             </div>
             <div className="p-6 border-t border-gray-200 flex justify-between items-center">
               <div className="flex flex-wrap">
